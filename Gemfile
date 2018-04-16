@@ -66,5 +66,6 @@ gem 'time_difference'
 
 gem 'flickr-objects'
 gem 'figaro'
+gem 'will_paginate'
 
 ruby '2.5.0'
