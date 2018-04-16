@@ -64,7 +64,7 @@ gem 'jquery-rails'
 gem 'material_icons'
 gem 'time_difference'
 
-gem 'flickraw'
+gem 'flickr-objects'
 gem 'figaro'
 
 ruby '2.5.0'
