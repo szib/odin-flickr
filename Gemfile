@@ -65,5 +65,6 @@ gem 'material_icons'
 gem 'time_difference'
 
 gem 'flickraw'
+gem 'figaro'
 
 ruby '2.5.0'
