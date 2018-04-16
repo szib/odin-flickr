@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def index
     unless params[:user].blank?
       if @user = get_flickr_user(params[:user])
-        @photos = @user.get_public_photos
+        @photos = @user.get_public_photos(page: params[:page], per_page: 42)
         unless @photos.present?
           flash.now[:warning] = "#{@user.username} has no public photos."
         end
