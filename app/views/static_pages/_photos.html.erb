@@ -1,14 +1,15 @@
-<div class="row border rounded p-3 bg-dark text-light">
-  <div class="col">
-    <h3 class="m-0"><%= @user.username %>'s public photos</h2>
-  </div>
-</div>
 
-<div class="d-flex p-2 flex-wrap justify-content-center">
-  <% @photos.each do |photo| %>
-    <div class="p-1">
-      <%# TODO: check if photo exists in that size %>
-      <%= image_tag photo.square75.source_url, class: 'rounded' %>
-    </div>
-  <% end %>
-</div>
+  <div class="d-flex p-2 flex-wrap justify-content-center">
+    <% @photos.each do |photo| %>
+      <div class="d-none d-md-flex">
+        <a href="<%= photo.medium500.source_url %>">
+          <%= image_tag photo.square150.source_url %>
+        </a>
+      </div>
+      <div class="d-flex d-md-none">
+        <a href="<%= photo.medium500.source_url %>">
+          <%= image_tag photo.square75.source_url %>
+        </a>
+      </div>
+    <% end %>
+  </div>
