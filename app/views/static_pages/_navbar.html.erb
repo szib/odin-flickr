@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to 'flickr browser', :root, class: 'navbar-brand' %>
+
+  <div class="navbar">
+    <form class="form-inline my-2 my-lg-0">
+    <%= form_tag '/', method: :get do %>
+      <input class="form-control mr-sm-2" name="user" type="search" placeholder="flickr id or username" aria-label="Search">
+      <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    <% end %>
+  </div>
+</nav>
