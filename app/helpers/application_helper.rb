@@ -6,4 +6,14 @@ module ApplicationHelper
       'Flickr browser'
     end
   end
+
+  def brand
+    if @user.present?
+      title = "@#{@user.username}"
+    else
+      title = 'flickr browser'
+    end
+    link_to title, :root, class: 'navbar-brand'
+  end
+
 end
